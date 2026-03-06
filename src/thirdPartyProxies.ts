@@ -61,6 +61,7 @@ export const knownThirdPartyProxies: Record<string, RegExp[]> = {
 
     '*': [
         /^https:\/\/[^/]+\.workers\.dev\/((?:https?:\/\/)?[^/]+\/file2\/.+)$/, // any workers.dev/[domain]/file2/[content] capturer
+        /^https:\/\/.+?\.workers\.dev\/((?:https?:\/\/).+)$/, // any [subdomain].workers.dev/[https://..... link] capturer
         /\/proxy\/(.+)$/, // Generic /proxy/encoded
         /\/m3u8-proxy\?url=(.+?)(?:&|$)/, // m3u8-proxy?url=
         /\/api\/[^/]+\/proxy\?url=(.+)$/, // /api/*/proxy?url=

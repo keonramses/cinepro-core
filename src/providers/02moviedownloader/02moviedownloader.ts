@@ -125,7 +125,7 @@ export class MovieDownloader extends BaseProvider {
                 }
 
                 sources.push({
-                    url: this.createProxyUrl(stream.url, this.HEADERS),
+                    url: this.createProxyUrl(stream.url, stream.url.includes('pixeldra') ? {} : this.HEADERS),
                     type: inferredType as SourceType,
                     quality: height ? height.toString() : stream.quality,
                     audioTracks: [
