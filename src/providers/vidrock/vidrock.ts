@@ -59,7 +59,7 @@ export class VidRockProvider extends BaseProvider {
 
                 let finalUrl: string;
 
-                if (stream.url.startsWith('https://cdn.vidrock.store/')) {
+                if (stream.url.includes('hls2.vdrk.site')) {
                     const secondData = (await this.fetchPage(
                         stream.url
                     )) as unknown as VidrockCDN[];

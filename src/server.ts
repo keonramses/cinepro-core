@@ -2,7 +2,8 @@ import { OMSSServer } from '@omss/framework';
 import 'dotenv/config';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { knownThirdPartyProxies } from './config.js';
+import { knownThirdPartyProxies } from './thirdPartyProxies.js';
+import { streamPatterns } from './streamPatterns.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,7 +40,8 @@ async function main() {
 
         // Third Party Proxy removal
         proxyConfig: {
-            knownThirdPartyProxies: knownThirdPartyProxies
+            knownThirdPartyProxies: knownThirdPartyProxies,
+            streamPatterns
         }
     });
 
