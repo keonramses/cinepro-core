@@ -15,7 +15,7 @@ import { ApiResponse } from './streammafia.types.js';
 export class StreamMafiaProvider extends BaseProvider {
     readonly id = 'streammafia';
     readonly name = 'MafiaEmbed';
-    readonly enabled = true;
+    readonly enabled = false;
 
     readonly BASE_URL = 'https://streammafiacdn.in';
     readonly EMBED_URL = 'https://embed.streammafia.to';
