@@ -146,7 +146,7 @@ export class VidSrcProvider extends BaseProvider {
             }
 
             const response = await axios.get(url, {
-                headers: this.HEADERS,
+                headers: this.HEADERS
             });
 
             if (response.status !== 200) {

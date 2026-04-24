@@ -42,7 +42,7 @@ export class IcefyProvider extends BaseProvider {
             const apiUrl = this.buildApiUrl(media);
 
             const response = await axios.get(apiUrl, {
-                headers: this.HEADERS,
+                headers: this.HEADERS
             });
 
             if (!response.data?.stream) {
